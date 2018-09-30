@@ -58,3 +58,6 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 ```
  typeAliases节点主要用来设置别名，其实这是挺好用的一个功能， 通过配置别名，我们不用再指定完整的包名，并且还能取别名。这里是配置了别名的实体类目录。例如： 我们在使用 com.demo.entity. UserEntity 的时候，我们可以直接配置一个别名user, 这样以后在配置文件中要使用到com.demo.entity. UserEntity的时候，直接使用user即可。
+ 
+ ### Springboot定时任务@Scheduled
+ 在com.rosam.springbootdatasourceconfig.task中有两个文件，如果没有ScheduleConfig.java，那么运行的是单线程版的定时任务。有了就是多线程版的定时，配置了线程池，初始了5条线程。具体大家可以参考我的csdn博客，[springboot定时任务@Scheduled](https://blog.csdn.net/weixin_38070406/article/details/82912304)
